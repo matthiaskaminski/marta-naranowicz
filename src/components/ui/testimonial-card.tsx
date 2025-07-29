@@ -31,7 +31,7 @@ export function TestimonialCard({
         disabled={false}
         proximity={64}
         inactiveZone={0.01}
-        borderWidth={2}
+        borderWidth={3}
       />
       <Card
         {...(href ? { href } : {})}
