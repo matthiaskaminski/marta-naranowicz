@@ -53,17 +53,17 @@ export function HeroSection() {
                                 <AnimatedGroup variants={transitionVariants}>
                                     <Link
                                         href="#webinar"
-                                        className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-black/5 transition-all duration-300 dark:border-t-white/5 dark:shadow-zinc-950">
-                                        <span className="text-foreground text-sm">Poznaj mój webinar</span>
-                                        <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
+                                        className="group mx-auto flex w-fit items-center gap-4 rounded-full border border-[#b59e5f] bg-[#b59e5f]/10 hover:bg-[#b59e5f]/20 p-2 px-6 shadow-md shadow-[#b59e5f]/10 transition-all duration-300">
+                                        <span className="text-[#b59e5f] text-base font-medium">Poznaj mój webinar</span>
+                                        <span className="block h-5 w-0.5 border-l border-[#b59e5f]/50"></span>
 
-                                        <div className="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500">
-                                            <div className="flex w-12 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
-                                                <span className="flex size-6">
-                                                    <ArrowRight className="m-auto size-3" />
+                                        <div className="bg-[#b59e5f]/20 group-hover:bg-[#b59e5f]/30 size-7 overflow-hidden rounded-full duration-500">
+                                            <div className="flex w-14 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
+                                                <span className="flex size-7">
+                                                    <ArrowRight className="m-auto size-4 text-[#b59e5f]" />
                                                 </span>
-                                                <span className="flex size-6">
-                                                    <ArrowRight className="m-auto size-3" />
+                                                <span className="flex size-7">
+                                                    <ArrowRight className="m-auto size-4 text-[#b59e5f]" />
                                                 </span>
                                             </div>
                                         </div>
@@ -126,19 +126,25 @@ export function HeroSection() {
                     ...transitionVariants,
                 }}
                 className="max-w-[1404px] mx-auto px-6 py-12">
-                <div className="relative border border-white/20 rounded-2xl p-2">
+                <div className="relative border border-white/20 rounded-2xl p-2 group">
                     <GlowingEffect
                         spread={40}
                         glow={true}
                         disabled={false}
                         proximity={64}
                         inactiveZone={0.01}
-                        borderWidth={2}
+                        borderWidth={3}
                     />
+                    <div 
+                        className="absolute -inset-4 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"
+                        style={{
+                            background: 'radial-gradient(circle, rgba(181, 158, 95, 0.2) 0%, rgba(181, 158, 95, 0.1) 40%, transparent 70%)'
+                        }}
+                    ></div>
                     <img 
                         src="/hero-image.jpg"
                         alt="Hero image"
-                        className="w-full h-[720px] object-cover rounded-xl"
+                        className="w-full h-[720px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-[1.02]"
                     />
                 </div>
             </AnimatedGroup>
@@ -187,49 +193,67 @@ export function HeroSection() {
                         }}
                         className="max-w-4xl mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div className="relative border border-white/20 rounded-2xl p-2">
+                            <div className="relative border border-white/20 rounded-2xl p-2 group">
                                 <GlowingEffect
                                     spread={40}
                                     glow={true}
                                     disabled={false}
                                     proximity={64}
                                     inactiveZone={0.01}
-                                    borderWidth={2}
+                                    borderWidth={3}
                                 />
+                                <div 
+                                    className="absolute -inset-4 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"
+                                    style={{
+                                        background: 'radial-gradient(circle, rgba(181, 158, 95, 0.2) 0%, rgba(181, 158, 95, 0.1) 40%, transparent 70%)'
+                                    }}
+                                ></div>
                                 <img 
                                     src="/Zdjęcie 05-10-2021, 11 28 31.jpg"
                                     alt="Portrait 1"
-                                    className="w-full h-[400px] object-cover rounded-xl"
+                                    className="w-full h-[400px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-[1.02]"
                                 />
                             </div>
-                            <div className="relative border border-white/20 rounded-2xl p-2">
+                            <div className="relative border border-white/20 rounded-2xl p-2 group">
                                 <GlowingEffect
                                     spread={40}
                                     glow={true}
                                     disabled={false}
                                     proximity={64}
                                     inactiveZone={0.01}
-                                    borderWidth={2}
+                                    borderWidth={3}
                                 />
+                                <div 
+                                    className="absolute -inset-4 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"
+                                    style={{
+                                        background: 'radial-gradient(circle, rgba(181, 158, 95, 0.2) 0%, rgba(181, 158, 95, 0.1) 40%, transparent 70%)'
+                                    }}
+                                ></div>
                                 <img 
                                     src="/Zdjęcie 26-01-2023, 09 44 30.jpg"
                                     alt="Portrait 2"
-                                    className="w-full h-[400px] object-cover rounded-xl"
+                                    className="w-full h-[400px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-[1.02]"
                                 />
                             </div>
-                            <div className="relative border border-white/20 rounded-2xl p-2">
+                            <div className="relative border border-white/20 rounded-2xl p-2 group">
                                 <GlowingEffect
                                     spread={40}
                                     glow={true}
                                     disabled={false}
                                     proximity={64}
                                     inactiveZone={0.01}
-                                    borderWidth={2}
+                                    borderWidth={3}
                                 />
+                                <div 
+                                    className="absolute -inset-4 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"
+                                    style={{
+                                        background: 'radial-gradient(circle, rgba(181, 158, 95, 0.2) 0%, rgba(181, 158, 95, 0.1) 40%, transparent 70%)'
+                                    }}
+                                ></div>
                                 <img 
                                     src="/Zdjęcie 03-12-2024, 14 11 11 (12).jpg"
                                     alt="Portrait 3"
-                                    className="w-full h-[400px] object-cover rounded-xl"
+                                    className="w-full h-[400px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-[1.02]"
                                 />
                             </div>
                         </div>
@@ -324,12 +348,18 @@ export function HeroSection() {
                                     disabled={false}
                                     proximity={64}
                                     inactiveZone={0.01}
-                                    borderWidth={2}
+                                    borderWidth={3}
                                 />
+                                <div 
+                                    className="absolute -inset-4 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"
+                                    style={{
+                                        background: 'radial-gradient(circle, rgba(181, 158, 95, 0.2) 0%, rgba(181, 158, 95, 0.1) 40%, transparent 70%)'
+                                    }}
+                                ></div>
                                 <img 
                                     src="/1.png"
                                     alt="Wzory i kolekcje"
-                                    className="w-full h-[400px] object-cover rounded-xl"
+                                    className="w-full h-[400px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-[1.02]"
                                 />
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl pointer-events-none"></div>
@@ -349,12 +379,18 @@ export function HeroSection() {
                                     disabled={false}
                                     proximity={64}
                                     inactiveZone={0.01}
-                                    borderWidth={2}
+                                    borderWidth={3}
                                 />
+                                <div 
+                                    className="absolute -inset-4 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"
+                                    style={{
+                                        background: 'radial-gradient(circle, rgba(181, 158, 95, 0.2) 0%, rgba(181, 158, 95, 0.1) 40%, transparent 70%)'
+                                    }}
+                                ></div>
                                 <img 
                                     src="/2.png"
                                     alt="Optymalizacja druku"
-                                    className="w-full h-[400px] object-cover rounded-xl"
+                                    className="w-full h-[400px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-[1.02]"
                                 />
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl pointer-events-none"></div>
@@ -374,12 +410,18 @@ export function HeroSection() {
                                     disabled={false}
                                     proximity={64}
                                     inactiveZone={0.01}
-                                    borderWidth={2}
+                                    borderWidth={3}
                                 />
+                                <div 
+                                    className="absolute -inset-4 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"
+                                    style={{
+                                        background: 'radial-gradient(circle, rgba(181, 158, 95, 0.2) 0%, rgba(181, 158, 95, 0.1) 40%, transparent 70%)'
+                                    }}
+                                ></div>
                                 <img 
                                     src="/3.png"
                                     alt="Strategia i szkolenia"
-                                    className="w-full h-[400px] object-cover rounded-xl"
+                                    className="w-full h-[400px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-[1.02]"
                                 />
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl pointer-events-none"></div>
