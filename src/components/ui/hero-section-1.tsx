@@ -53,17 +53,17 @@ export function HeroSection() {
                                 <AnimatedGroup variants={transitionVariants}>
                                     <Link
                                         href="#webinar"
-                                        className="group mx-auto flex w-fit items-center gap-4 rounded-full border border-[#b59e5f] bg-[#b59e5f]/10 hover:bg-[#b59e5f]/20 p-2 px-6 shadow-md shadow-[#b59e5f]/10 transition-all duration-300">
-                                        <span className="text-[#b59e5f] text-base font-medium">Poznaj mój webinar</span>
-                                        <span className="block h-5 w-0.5 border-l border-[#b59e5f]/50"></span>
+                                        className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-black/5 transition-all duration-300 dark:border-t-white/5 dark:shadow-zinc-950">
+                                        <span className="text-foreground text-sm">Poznaj mój webinar</span>
+                                        <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
 
-                                        <div className="bg-[#b59e5f]/20 group-hover:bg-[#b59e5f]/30 size-7 overflow-hidden rounded-full duration-500">
-                                            <div className="flex w-14 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
-                                                <span className="flex size-7">
-                                                    <ArrowRight className="m-auto size-4 text-[#b59e5f]" />
+                                        <div className="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500">
+                                            <div className="flex w-12 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
+                                                <span className="flex size-6">
+                                                    <ArrowRight className="m-auto size-3" />
                                                 </span>
-                                                <span className="flex size-7">
-                                                    <ArrowRight className="m-auto size-4 text-[#b59e5f]" />
+                                                <span className="flex size-6">
+                                                    <ArrowRight className="m-auto size-3" />
                                                 </span>
                                             </div>
                                         </div>
@@ -142,9 +142,9 @@ export function HeroSection() {
                         }}
                     ></div>
                     <img 
-                        src="/hero-image.jpg"
+                        src="/4.png"
                         alt="Hero image"
-                        className="w-full h-[720px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-[1.02]"
+                        className="w-full h-[720px] object-cover rounded-xl"
                     />
                 </div>
             </AnimatedGroup>
@@ -211,7 +211,7 @@ export function HeroSection() {
                                 <img 
                                     src="/Zdjęcie 05-10-2021, 11 28 31.jpg"
                                     alt="Portrait 1"
-                                    className="w-full h-[400px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-[1.02]"
+                                    className="w-full h-[400px] object-cover rounded-xl "
                                 />
                             </div>
                             <div className="relative border border-white/20 rounded-2xl p-2 group">
@@ -232,7 +232,7 @@ export function HeroSection() {
                                 <img 
                                     src="/Zdjęcie 26-01-2023, 09 44 30.jpg"
                                     alt="Portrait 2"
-                                    className="w-full h-[400px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-[1.02]"
+                                    className="w-full h-[400px] object-cover rounded-xl "
                                 />
                             </div>
                             <div className="relative border border-white/20 rounded-2xl p-2 group">
@@ -253,7 +253,7 @@ export function HeroSection() {
                                 <img 
                                     src="/Zdjęcie 03-12-2024, 14 11 11 (12).jpg"
                                     alt="Portrait 3"
-                                    className="w-full h-[400px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-[1.02]"
+                                    className="w-full h-[400px] object-cover rounded-xl "
                                 />
                             </div>
                         </div>
@@ -359,7 +359,7 @@ export function HeroSection() {
                                 <img 
                                     src="/1.png"
                                     alt="Wzory i kolekcje"
-                                    className="w-full h-[400px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-[1.02]"
+                                    className="w-full h-[400px] object-cover rounded-xl "
                                 />
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl pointer-events-none"></div>
@@ -390,7 +390,7 @@ export function HeroSection() {
                                 <img 
                                     src="/2.png"
                                     alt="Optymalizacja druku"
-                                    className="w-full h-[400px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-[1.02]"
+                                    className="w-full h-[400px] object-cover rounded-xl "
                                 />
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl pointer-events-none"></div>
@@ -421,7 +421,7 @@ export function HeroSection() {
                                 <img 
                                     src="/3.png"
                                     alt="Strategia i szkolenia"
-                                    className="w-full h-[400px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-[1.02]"
+                                    className="w-full h-[400px] object-cover rounded-xl "
                                 />
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl pointer-events-none"></div>
