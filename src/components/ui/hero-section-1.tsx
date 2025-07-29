@@ -104,21 +104,21 @@ export function HeroSection() {
             
             
             {/* Obraz pod sekcją hero */}
-            <AnimatedGroup
-                variants={{
-                    container: {
-                        visible: {
-                            transition: {
-                                staggerChildren: 0.1,
-                                delayChildren: 0.3,
+            <div className="max-w-[1404px] mx-auto px-6 py-12" style={{ contain: 'layout style paint', transform: 'translate3d(0,0,0)' }}>
+                <AnimatedGroup
+                    variants={{
+                        container: {
+                            visible: {
+                                transition: {
+                                    staggerChildren: 0.1,
+                                    delayChildren: 0.3,
+                                },
                             },
                         },
-                    },
-                    ...transitionVariants,
-                }}
-                className="max-w-[1404px] mx-auto px-6 py-12 will-change-transform"
-                style={{ contain: 'layout style paint', transform: 'translate3d(0,0,0)' }}>
-                <div className="relative border border-white/20 rounded-2xl p-2 group">
+                        ...transitionVariants,
+                    }}
+                    className="will-change-transform">
+                    <div className="relative border border-white/20 rounded-2xl p-2 group">
                     <GlowingEffect
                         spread={40}
                         glow={true}
@@ -141,8 +141,9 @@ export function HeroSection() {
                         priority
                         className="w-full h-[720px] object-cover rounded-xl"
                     />
-                </div>
-            </AnimatedGroup>
+                    </div>
+                </AnimatedGroup>
+            </div>
 
             {/* Sekcja O mnie */}
             <section className="py-20 px-6">
@@ -174,21 +175,20 @@ export function HeroSection() {
                     </AnimatedGroup>
                     
                     {/* 3 zdjęcia */}
-                    <AnimatedGroup
-                        variants={{
-                            container: {
-                                visible: {
-                                    transition: {
-                                        staggerChildren: 0.2,
-                                        delayChildren: 0.4,
+                    <div className="max-w-4xl mx-auto" style={{ contain: 'layout style paint' }}>
+                        <AnimatedGroup
+                            variants={{
+                                container: {
+                                    visible: {
+                                        transition: {
+                                            staggerChildren: 0.2,
+                                            delayChildren: 0.4,
+                                        },
                                     },
                                 },
-                            },
-                            ...transitionVariants,
-                        }}
-                        className="max-w-4xl mx-auto"
-                        style={{ contain: 'layout style paint' }}>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                ...transitionVariants,
+                            }}>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="relative border border-white/20 rounded-2xl p-2 group">
                                 <GlowingEffect
                                     spread={40}
@@ -261,8 +261,9 @@ export function HeroSection() {
                                     className="w-full h-[400px] object-cover rounded-xl"
                                 />
                             </div>
-                        </div>
-                    </AnimatedGroup>
+                            </div>
+                        </AnimatedGroup>
+                    </div>
                 </div>
             </section>
 
