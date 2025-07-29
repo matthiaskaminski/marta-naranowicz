@@ -49,10 +49,11 @@ export function TestimonialsSection({
           </p>
         </div>
 
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden" style={{ contain: 'layout style paint' }}>
           <motion.div 
             ref={containerRef}
             className="flex gap-6 p-2 will-change-transform"
+            layout={false}
             animate={{
               x: [0, -width]
             }}
@@ -60,7 +61,7 @@ export function TestimonialsSection({
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 25,
+                duration: 20,
                 ease: "linear",
                 delay: 2
               }

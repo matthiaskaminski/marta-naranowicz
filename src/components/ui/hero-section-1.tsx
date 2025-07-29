@@ -116,7 +116,8 @@ export function HeroSection() {
                     },
                     ...transitionVariants,
                 }}
-                className="max-w-[1404px] mx-auto px-6 py-12 will-change-transform">
+                className="max-w-[1404px] mx-auto px-6 py-12 will-change-transform"
+                style={{ contain: 'layout style paint', transform: 'translate3d(0,0,0)' }}>
                 <div className="relative border border-white/20 rounded-2xl p-2 group">
                     <GlowingEffect
                         spread={40}
@@ -132,9 +133,12 @@ export function HeroSection() {
                             background: 'radial-gradient(circle, rgba(181, 158, 95, 0.2) 0%, rgba(181, 158, 95, 0.1) 40%, transparent 70%)'
                         }}
                     ></div>
-                    <img 
+                    <Image 
                         src="/4.png"
                         alt="Hero image"
+                        width={1200}
+                        height={720}
+                        priority
                         className="w-full h-[720px] object-cover rounded-xl"
                     />
                 </div>
@@ -182,7 +186,8 @@ export function HeroSection() {
                             },
                             ...transitionVariants,
                         }}
-                        className="max-w-4xl mx-auto">
+                        className="max-w-4xl mx-auto"
+                        style={{ contain: 'layout style paint' }}>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="relative border border-white/20 rounded-2xl p-2 group">
                                 <GlowingEffect
@@ -199,10 +204,13 @@ export function HeroSection() {
                                         background: 'radial-gradient(circle, rgba(181, 158, 95, 0.2) 0%, rgba(181, 158, 95, 0.1) 40%, transparent 70%)'
                                     }}
                                 ></div>
-                                <img 
+                                <Image 
                                     src="/Zdjęcie 05-10-2021, 11 28 31.jpg"
                                     alt="Portrait 1"
-                                    className="w-full h-[400px] object-cover rounded-xl "
+                                    width={400}
+                                    height={400}
+                                    loading="lazy"
+                                    className="w-full h-[400px] object-cover rounded-xl"
                                 />
                             </div>
                             <div className="relative border border-white/20 rounded-2xl p-2 group">
@@ -220,10 +228,13 @@ export function HeroSection() {
                                         background: 'radial-gradient(circle, rgba(181, 158, 95, 0.2) 0%, rgba(181, 158, 95, 0.1) 40%, transparent 70%)'
                                     }}
                                 ></div>
-                                <img 
+                                <Image 
                                     src="/Zdjęcie 26-01-2023, 09 44 30.jpg"
                                     alt="Portrait 2"
-                                    className="w-full h-[400px] object-cover rounded-xl "
+                                    width={400}
+                                    height={400}
+                                    loading="lazy"
+                                    className="w-full h-[400px] object-cover rounded-xl"
                                 />
                             </div>
                             <div className="relative border border-white/20 rounded-2xl p-2 group">
@@ -241,10 +252,13 @@ export function HeroSection() {
                                         background: 'radial-gradient(circle, rgba(181, 158, 95, 0.2) 0%, rgba(181, 158, 95, 0.1) 40%, transparent 70%)'
                                     }}
                                 ></div>
-                                <img 
+                                <Image 
                                     src="/Zdjęcie 03-12-2024, 14 11 11 (12).jpg"
                                     alt="Portrait 3"
-                                    className="w-full h-[400px] object-cover rounded-xl "
+                                    width={400}
+                                    height={400}
+                                    loading="lazy"
+                                    className="w-full h-[400px] object-cover rounded-xl"
                                 />
                             </div>
                         </div>
@@ -347,10 +361,13 @@ export function HeroSection() {
                                         background: 'radial-gradient(circle, rgba(181, 158, 95, 0.2) 0%, rgba(181, 158, 95, 0.1) 40%, transparent 70%)'
                                     }}
                                 ></div>
-                                <img 
+                                <Image 
                                     src="/1.png"
                                     alt="Wzory i kolekcje"
-                                    className="w-full h-[400px] object-cover rounded-xl "
+                                    width={400}
+                                    height={400}
+                                    loading="lazy"
+                                    className="w-full h-[400px] object-cover rounded-xl"
                                 />
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl pointer-events-none"></div>
@@ -378,10 +395,13 @@ export function HeroSection() {
                                         background: 'radial-gradient(circle, rgba(181, 158, 95, 0.2) 0%, rgba(181, 158, 95, 0.1) 40%, transparent 70%)'
                                     }}
                                 ></div>
-                                <img 
+                                <Image 
                                     src="/2.png"
                                     alt="Optymalizacja druku"
-                                    className="w-full h-[400px] object-cover rounded-xl "
+                                    width={400}
+                                    height={400}
+                                    loading="lazy"
+                                    className="w-full h-[400px] object-cover rounded-xl"
                                 />
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl pointer-events-none"></div>
@@ -409,10 +429,13 @@ export function HeroSection() {
                                         background: 'radial-gradient(circle, rgba(181, 158, 95, 0.2) 0%, rgba(181, 158, 95, 0.1) 40%, transparent 70%)'
                                     }}
                                 ></div>
-                                <img 
+                                <Image 
                                     src="/3.png"
                                     alt="Strategia i szkolenia"
-                                    className="w-full h-[400px] object-cover rounded-xl "
+                                    width={400}
+                                    height={400}
+                                    loading="lazy"
+                                    className="w-full h-[400px] object-cover rounded-xl"
                                 />
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl pointer-events-none"></div>
@@ -537,9 +560,11 @@ const HeroHeader = () => {
 
 const Logo = ({ className }: { className?: string }) => {
     return (
-        <img
+        <Image
             src="/logo.svg"
             alt="Logo"
+            width={36}
+            height={36}
             className={cn('h-9 w-auto', className)}
         />
     )

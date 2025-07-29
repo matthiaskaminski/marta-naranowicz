@@ -32,10 +32,16 @@ const GlowingEffect = memo(
     const containerRef = useRef<HTMLDivElement>(null);
     const lastPosition = useRef({ x: 0, y: 0 });
     const animationFrameRef = useRef<number>(0);
+    const lastUpdateTime = useRef<number>(0);
 
     const handleMove = useCallback(
       (e?: MouseEvent | { x: number; y: number }) => {
         if (!containerRef.current) return;
+
+        // Throttle to 16ms (60fps)
+        const now = Date.now();
+        if (now - lastUpdateTime.current < 16) return;
+        lastUpdateTime.current = now;
 
         if (animationFrameRef.current) {
           cancelAnimationFrame(animationFrameRef.current);
@@ -159,12 +165,16 @@ const GlowingEffect = memo(
             } as React.CSSProperties
           }
           className={cn(
-            "pointer-events-none absolute inset-0 rounded-[inherit] opacity-100 transition-opacity",
+            "pointer-events-none absolute inset-0 rounded-[inherit] opacity-100 transition-opacity will-change-transform",
             glow && "opacity-100",
             blur > 0 && "blur-[var(--blur)] ",
             className,
             disabled && "!hidden"
           )}
+          style={{
+            transform: 'translateZ(0)',
+            backfaceVisibility: 'hidden'
+          } as React.CSSProperties}
         >
           <div
             className={cn(
