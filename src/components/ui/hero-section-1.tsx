@@ -25,7 +25,7 @@ const transitionVariants = {
             transition: {
                 type: 'spring' as const,
                 bounce: 0.3,
-                duration: 1.5,
+                duration: 0.8,
             },
         },
     },
@@ -113,7 +113,19 @@ export function HeroSection() {
             
             
             {/* Obraz pod sekcją hero */}
-            <div className="max-w-[1404px] mx-auto px-6 py-12">
+            <AnimatedGroup
+                variants={{
+                    container: {
+                        visible: {
+                            transition: {
+                                staggerChildren: 0.1,
+                                delayChildren: 0.3,
+                            },
+                        },
+                    },
+                    ...transitionVariants,
+                }}
+                className="max-w-[1404px] mx-auto px-6 py-12">
                 <div className="relative border border-white/20 rounded-2xl p-2">
                     <GlowingEffect
                         spread={40}
@@ -129,12 +141,24 @@ export function HeroSection() {
                         className="w-full h-[720px] object-cover rounded-xl"
                     />
                 </div>
-            </div>
+            </AnimatedGroup>
 
             {/* Sekcja O mnie */}
             <section className="py-20 px-6">
                 <div className="max-w-[1404px] mx-auto text-left">
-                    <div className="max-w-[600px] mx-auto text-left">
+                    <AnimatedGroup
+                        variants={{
+                            container: {
+                                visible: {
+                                    transition: {
+                                        staggerChildren: 0.15,
+                                        delayChildren: 0.2,
+                                    },
+                                },
+                            },
+                            ...transitionVariants,
+                        }}
+                        className="max-w-[600px] mx-auto text-left">
                         <h2 className="text-5xl mb-8" style={{color: '#F0F0F0', fontWeight: 600}}>O mnie</h2>
                         <p className="mb-2" style={{color: '#F0F0F0', fontSize: '16px'}}>
                             Marta Naranowicz – Ekspertka w dziedzinie AI, druku wielkoformatowego i strategii wizualnych
@@ -146,10 +170,22 @@ export function HeroSection() {
                             <br />
                             Współpracowałam z markami takimi jak Canon, wspierając wdrażanie innowacji w branży dekoracji wnętrz i druku.
                         </p>
-                    </div>
+                    </AnimatedGroup>
                     
                     {/* 3 zdjęcia */}
-                    <div className="max-w-4xl mx-auto">
+                    <AnimatedGroup
+                        variants={{
+                            container: {
+                                visible: {
+                                    transition: {
+                                        staggerChildren: 0.2,
+                                        delayChildren: 0.4,
+                                    },
+                                },
+                            },
+                            ...transitionVariants,
+                        }}
+                        className="max-w-4xl mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="relative border border-white/20 rounded-2xl p-2">
                                 <GlowingEffect
@@ -197,7 +233,7 @@ export function HeroSection() {
                                 />
                             </div>
                         </div>
-                    </div>
+                    </AnimatedGroup>
                 </div>
             </section>
 
@@ -244,7 +280,19 @@ export function HeroSection() {
             {/* Sekcja Współpraca */}
             <section className="py-20 px-6">
                 <div className="max-w-[1404px] mx-auto text-left">
-                    <div className="max-w-[600px] mx-auto text-left">
+                    <AnimatedGroup
+                        variants={{
+                            container: {
+                                visible: {
+                                    transition: {
+                                        staggerChildren: 0.15,
+                                        delayChildren: 0.2,
+                                    },
+                                },
+                            },
+                            ...transitionVariants,
+                        }}
+                        className="max-w-[600px] mx-auto text-left">
                         <h2 className="text-5xl mb-4" style={{color: '#F0F0F0', fontWeight: 600}}>Współpraca</h2>
                         <p className="mb-2" style={{color: '#F0F0F0', fontSize: '16px'}}>
                             Innowacja zaczyna się od dobrej współpracy.
@@ -252,10 +300,22 @@ export function HeroSection() {
                         <p className="mb-16 leading-relaxed" style={{color: '#595959', fontSize: '14px'}}>
                             Wierzę, że prawdziwa zmiana w biznesie i designie zaczyna się tam, gdzie technologia spotyka się z wizją. Dlatego każą kreujemy z najnowszymi narzędziami. A gdy potrzebna jest większa moc — wspieram branżę, prowadząc czy wykonuję marki, produktów i producentów w tworzeniu czegoś naprawdę wyjątkowego. Bez względu na to, czy chcesz urewnić proces produkcji, stworzyć unikalne wzory, czy wejść w świat AI — pomogę Ci znaleźć właściwe rozwiązanie.
                         </p>
-                    </div>
+                    </AnimatedGroup>
                     
                     {/* 3 kafelki współpracy */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <AnimatedGroup
+                        variants={{
+                            container: {
+                                visible: {
+                                    transition: {
+                                        staggerChildren: 0.25,
+                                        delayChildren: 0.4,
+                                    },
+                                },
+                            },
+                            ...transitionVariants,
+                        }}
+                        className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="relative group">
                             <div className="relative border border-white/20 rounded-2xl p-2">
                                 <GlowingEffect
@@ -330,7 +390,7 @@ export function HeroSection() {
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </AnimatedGroup>
                 </div>
             </section>
         </>
@@ -342,7 +402,6 @@ const menuItems = [
     { name: 'Współpraca', href: '#wspolpraca' },
     { name: 'Webinar', href: '#webinar' },
     { name: 'Blog', href: '#blog' },
-    { name: 'Kontakt', href: '#kontakt' },
 ]
 
 const HeroHeader = () => {

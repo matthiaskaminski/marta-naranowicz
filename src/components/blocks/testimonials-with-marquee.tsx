@@ -61,7 +61,8 @@ export function TestimonialsSection({
                 repeat: Infinity,
                 repeatType: "loop",
                 duration: 25,
-                ease: "linear"
+                ease: "linear",
+                delay: 2
               }
             }}
           >
