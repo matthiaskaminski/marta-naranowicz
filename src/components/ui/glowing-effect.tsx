@@ -162,6 +162,8 @@ const GlowingEffect = memo(
                   #c9b262 calc(75% / var(--repeating-conic-gradient-times)),
                   #b59e5f calc(100% / var(--repeating-conic-gradient-times))
                 )`,
+              transform: 'translateZ(0)',
+              backfaceVisibility: 'hidden'
             } as React.CSSProperties
           }
           className={cn(
@@ -171,10 +173,6 @@ const GlowingEffect = memo(
             className,
             disabled && "!hidden"
           )}
-          style={{
-            transform: 'translateZ(0)',
-            backfaceVisibility: 'hidden'
-          } as React.CSSProperties}
         >
           <div
             className={cn(
