@@ -11,9 +11,8 @@ export function SmoothScrollProvider({ children }: SmoothScrollProviderProps) {
   useEffect(() => {
     // Initialize Lenis for smooth scrolling
     const lenis = new Lenis({
-      duration: 0.8,
+      duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      lerp: 0.1,
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,

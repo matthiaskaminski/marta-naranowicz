@@ -1,14 +1,10 @@
-import type { Metadata } from 'next'
+'use client';
+
 import { Inter } from 'next/font/google'
 import { SmoothScrollProvider } from '@/components/ui/smooth-scroll-provider'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
-
-export const metadata: Metadata = {
-  title: 'Hero Section Demo',
-  description: 'Hero section template demo',
-}
 
 export default function RootLayout({
   children,
@@ -17,6 +13,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <title>Marta AI - Sztuczna Inteligencja dla Biznesu</title>
+        <meta name="description" content="Wykorzystaj moc AI do automatyzacji procesów, analizy danych i optymalizacji decyzji biznesowych." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body className={inter.className}>
         <SmoothScrollProvider>
           {children}

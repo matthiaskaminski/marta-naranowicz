@@ -2,7 +2,6 @@
 
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { ArrowRight, ChevronRight, Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { AnimatedGroup } from '@/components/ui/animated-group'
@@ -133,12 +132,9 @@ export function HeroSection() {
                             background: 'radial-gradient(circle, rgba(181, 158, 95, 0.2) 0%, rgba(181, 158, 95, 0.1) 40%, transparent 70%)'
                         }}
                     ></div>
-                    <Image 
+                    <img 
                         src="/4.png"
                         alt="Hero image"
-                        width={1200}
-                        height={720}
-                        priority
                         className="w-full h-[720px] object-cover rounded-xl"
                     />
                     </div>
@@ -204,11 +200,9 @@ export function HeroSection() {
                                         background: 'radial-gradient(circle, rgba(181, 158, 95, 0.2) 0%, rgba(181, 158, 95, 0.1) 40%, transparent 70%)'
                                     }}
                                 ></div>
-                                <Image 
+                                <img 
                                     src="/Zdjęcie 05-10-2021, 11 28 31.jpg"
                                     alt="Portrait 1"
-                                    width={400}
-                                    height={400}
                                     loading="lazy"
                                     className="w-full h-[400px] object-cover rounded-xl"
                                 />
@@ -228,11 +222,9 @@ export function HeroSection() {
                                         background: 'radial-gradient(circle, rgba(181, 158, 95, 0.2) 0%, rgba(181, 158, 95, 0.1) 40%, transparent 70%)'
                                     }}
                                 ></div>
-                                <Image 
+                                <img 
                                     src="/Zdjęcie 26-01-2023, 09 44 30.jpg"
                                     alt="Portrait 2"
-                                    width={400}
-                                    height={400}
                                     loading="lazy"
                                     className="w-full h-[400px] object-cover rounded-xl"
                                 />
@@ -252,11 +244,9 @@ export function HeroSection() {
                                         background: 'radial-gradient(circle, rgba(181, 158, 95, 0.2) 0%, rgba(181, 158, 95, 0.1) 40%, transparent 70%)'
                                     }}
                                 ></div>
-                                <Image 
+                                <img 
                                     src="/Zdjęcie 03-12-2024, 14 11 11 (12).jpg"
                                     alt="Portrait 3"
-                                    width={400}
-                                    height={400}
                                     loading="lazy"
                                     className="w-full h-[400px] object-cover rounded-xl"
                                 />
@@ -362,11 +352,9 @@ export function HeroSection() {
                                         background: 'radial-gradient(circle, rgba(181, 158, 95, 0.2) 0%, rgba(181, 158, 95, 0.1) 40%, transparent 70%)'
                                     }}
                                 ></div>
-                                <Image 
+                                <img 
                                     src="/1.png"
                                     alt="Wzory i kolekcje"
-                                    width={400}
-                                    height={400}
                                     loading="lazy"
                                     className="w-full h-[400px] object-cover rounded-xl"
                                 />
@@ -396,11 +384,9 @@ export function HeroSection() {
                                         background: 'radial-gradient(circle, rgba(181, 158, 95, 0.2) 0%, rgba(181, 158, 95, 0.1) 40%, transparent 70%)'
                                     }}
                                 ></div>
-                                <Image 
+                                <img 
                                     src="/2.png"
                                     alt="Optymalizacja druku"
-                                    width={400}
-                                    height={400}
                                     loading="lazy"
                                     className="w-full h-[400px] object-cover rounded-xl"
                                 />
@@ -430,11 +416,9 @@ export function HeroSection() {
                                         background: 'radial-gradient(circle, rgba(181, 158, 95, 0.2) 0%, rgba(181, 158, 95, 0.1) 40%, transparent 70%)'
                                     }}
                                 ></div>
-                                <Image 
+                                <img 
                                     src="/3.png"
                                     alt="Strategia i szkolenia"
-                                    width={400}
-                                    height={400}
                                     loading="lazy"
                                     className="w-full h-[400px] object-cover rounded-xl"
                                 />
@@ -561,11 +545,9 @@ const HeroHeader = () => {
 
 const Logo = ({ className }: { className?: string }) => {
     return (
-        <Image
+        <img
             src="/logo.svg"
             alt="Logo"
-            width={36}
-            height={36}
             className={cn('h-9 w-auto', className)}
         />
     )
